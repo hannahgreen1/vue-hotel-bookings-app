@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      eventBus.$emit('add-booking', this.$data);
+      eventBus.$emit('edit-booking', this.$data);
       this.name = this.email = this.number_of_nights ='';
       this.checked_in = false;
     }

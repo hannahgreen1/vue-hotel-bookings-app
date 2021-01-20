@@ -4,8 +4,8 @@
     <p>Email: {{ booking.email }}</p>
     <p>Nights: {{ booking.number_of_nights }}</p>
     <button v-on:click="toggleCheckedIn">{{ checkInButtonText }}</button>
-    <button v-on:click="deleteBooking">Delete This Booking</button>
     <button v-on:click="editBooking">Edit This Booking</button>
+    <button v-on:click="deleteBooking">Delete This Booking</button>
   </div>
 
 </template>

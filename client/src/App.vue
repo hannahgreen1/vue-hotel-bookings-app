@@ -34,6 +34,11 @@ export default {
       const index = this.bookings.findIndex(booking => booking._id === id);
       this.bookings.splice(index, 1);
     });
+    // eventBus.$on('edit-booking', (id) => {
+    //   BookingService.updateBooking(updatedBooking);
+    //   const index = this.bookings.findIndex(booking => booking._id === updatedBooking._id);
+    //   this.bookings.splice(index, 1, updatedBooking);
+    // });
     eventBus.$on('toggle-checked-in', booking => {
       const updatedBooking = {
         ...booking,
@@ -48,7 +53,10 @@ export default {
     fetchBookings() {
       BookingService.getBookings()
         .then(bookings => this.bookings = bookings);
-    }
+    },
+    // editBooking(){
+
+    // }
   }
 }
 </script>
